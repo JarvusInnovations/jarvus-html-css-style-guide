@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Jarvus HTML & CSS Style Guide</title>
+        <meta name="description" content="Jarvus Innovations HTML and CSS styleguide.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <header class="site-header contain unit-1--bp0 unit-2-7--bp1">
+            <a href="/"><img class="site-logo" src="img/logo.svg" alt="Jarvus Logo" /></a>
+            <nav class="site-nav" role="navigation">
+                <ul class="reset">
+                    <li>
+                        <a href="#general">General</a>
+                        <ul class="reset">
+                            <li><a href="#indentation">Indentation</a></li>
+                            <li><a href="#capitalization">Capitalization</a></li>
+                            <li><a href="#trailing-whitespace">Trailing Whitespace</a></li>
+                            <li><a href="#resource-linking">Resource Linking</a></li>
+                            <li><a href="#encoding">Encoding</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#html">HTML</a>
+                        <ul class="reset">
+                            <li><a href="#document-type">Document Type</a></li>
+                            <li><a href="#language">Language</a></li>
+                            <li><a href="#document-formatting">Document Formatting</a></li>
+                            <li><a href="#optional-tags">Optional Tags</a></li>
+                            <li><a href="#quotation-marks-html">Quotation Marks</a></li>
+                            <li><a href="#linked-types">Linked Resource Types</a></li>
+                            <li><a href="#entities">Character Entities</a></li>
+                            <li><a href="#semantics">Semantics</a></li>
+                            <li><a href="#separate-concerns">Seperation of Concerns</a></li>
+                            <li><a href="#multimedia-fallbacks">Multimedia Fallbacks</a></li>
+                            <li><a href="#html5-outline">HTML5 Outline</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#css">CSS</a>
+                        <ul class="reset">
+                            <li><a href="#selector-formatting">Selector Formatting</a></li>
+                            <li><a href="#selector-grouping">Selector Grouping</a></li>
+                            <li><a href="#selector-grouping">Selector Grouping</a></li>
+                            <li><a href="#property-order">Property Order</a></li>
+                            <li><a href="#selector-indentation">Indentation</a></li>
+                            <li><a href="#quotation-marks-css">Quotation Marks</a></li>
+                            <li><a href="#decimals">Decimals</a></li>
+                            <li><a href="#units">Units</a></li>
+                            <li><a href="#color-values">Units</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header><!-- 
+     --><div class="site-content contain unit-1--bp0 unit-5-7--bp1">
+            <main class="site-main">
+                <h1>Jarvus HTML & CSS Style Guide</h1>
+                <section id="general">
+                    <h2 class="section-title">General</h2>
+                    <h3 id="indentation">Indentation</h3>
+                    <p>Use 4 spaces. Do not use tabs.</p>
+                    <div class="code-block code-block--do">
+                        <pre><code>&lt;div&gt;
+    &lt;p&gt;Lorem ipsum&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-block code-block--do">
+                    <pre><code>p {
+    margin-bottom: 1em;
+}</code></pre>
+                    </div>
+                    <h3>Capitalization</h3>
+                    <p>Use lowercase, including on hex values.</p>
+                    <h4>Do</h4>
+                    <div class="code-block code-block--do">
+                        <pre><code>&lt;a href="http://jarv.us"&gt;Jarvus Innovations&lt;/a&gt;</code></pre>
+                    </div>
+                    <div class="code-block code-block--do">
+                        <pre><code>color: #f5f5f5;</code></pre>
+                    </div>
+                    <h4>Don’t</h4>
+                    <div class="code-block code-block--do-not">
+                        <pre><code>&lt;A HREF="HTTP://JARV.US"&gt;Jarvus Innovations&lt;/A&gt;</code></pre>
+                    </div>
+                    <div class="code-block code-block--do-not">
+                        <pre><code>COLOR: #F5F5F5;</code></pre>
+                    </div>
+                    <h3 id="trailing-whitespace">Trailing Whitespace</h3>
+                    <p>Remove trailing white space.</p>
+                    <h4>Do</h4>
+                    <div class="code-block code-block--do">
+                        <pre><code>&lt;p&gt;Jarvus Innovations&lt;/p&gt;</code></pre>
+                    </div>
+                    <div class="code-block code-block--do">
+                        <pre><code>margin-bottom: 1em;</code></pre>
+                    </div>
+                    <h4>Don’t</h4>
+                    <div class="code-block code-block--do-not">
+                        <pre><code>&lt;p&gt;Jarvus Innovations&lt;/p&gt;<mark>&nbsp;&nbsp;&nbsp;</mark></code></pre>
+                    </div>
+                    <div class="code-block code-block--do-not">
+                        <pre><code>margin-bottom: 1em;<mark>&nbsp;&nbsp;</mark></code></pre>
+                    </div>
+                    <h3>Resource Linking</h3>
+                    <p>Use relative URLs for local resources. Use protocol relative URLs when appropriate.</p>
+                    <h4>Do</h4>
+                    <div class="code-block code-block--do">
+                        <pre><code>&lt;img src="/img/image.jpg" alt="Image." /&gt;</code></pre>
+                    </div>
+                    <div class="code-block code-block--do">
+                        <pre><code>div {
+    background-url: (//img/image.jpg);
+}</code></pre>
+                    </div>
+                    <div class="code-block code-block--do">
+                        <pre><code>&lt;img src="//img/image.jpg" alt="Image." /&gt;</code></pre>
+                    </div>
+                    <h4>Don’t</h4>
+                    <div class="code-block code-block--do-not">
+                        <pre><code>&lt;img src="http:/jarv.us/img/image.jpg" alt="Image." /&gt;</code></pre>
+                    </div>
+                    <div class="code-block code-block--do-not">
+                        <pre><code>div {
+    background-url: (http:/jarv.us/img/image.jpg);
+}</code></pre>
+                    </div>
+                    <h3 id="encoding">Encoding</h3>
+                    <p>Encode HTML and CSS documents in UTF-8. Specify this encoding in HTML in the head (not necessary in CSS).</p>
+                    <div class="code-block code-block--do">
+                        <pre><code>&lt;meta charset="utf-8"&gt;</code></pre>
+                    </div>
+                </section>
+                <section id="html">
+                    <h2 class="section-title">HTML</h2>
+                    <h3 id="document-type">Document Type</h3>
+                    <p>Use the HTML5 doctype:</p>
+                    <div class="code-block code-block--do">
+                        <pre><code>&lt;!DOCTYPE html&gt;</code></pre>
+                    </div>
+                    <h3 id="language">Language</h3>
+                    <p>Specify the document language when appropriate.</p>
+                    <div class="code-block code-block--do">
+                        <pre><code>&lt;html lang="en-us"&gt;</code></pre>
+                    </div>
+                    <h3 id="document-formatting">Document Formatting</h3>
+                    <p>Line break after every block element. Indent every child element.</p>
+                    <div class="code-block code-block--do">
+                        <pre><code>&lt;blockquote&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+&lt;/blockquote&gt;</code></pre>
+                    </div>
+                    <div class="code-block code-block--do">
+                        <pre><code>&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Heading&lt;/th&gt;
+            &lt;th&gt;Heading&lt;/th&gt;
+            &lt;th&gt;Heading&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Table cell&lt;/td&gt;
+            &lt;td&gt;Table cell&lt;/td&gt;
+            &lt;td&gt;Table cell&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                    </div>
+                    <h3 id="optional-tags">Optional Tags</h3>
+                    <p>Always close tags. Even when optional.</p>
+                    <h4>Do</h4>
+                    <div class="code-block code-block--do">
+                        <pre><code>&lt;ul&gt;
+    &lt;li&gt;List item&lt;/li&gt;
+    &lt;li&gt;List item&lt;/li&gt;
+    &lt;li&gt;List item&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                    </div>
+                    <h4>Don’t</h4>
+                    <div class="code-block code-block--do-not">
+                        <pre><code>&lt;ul&gt;
+    &lt;li&gt;List item
+    &lt;li&gt;List item
+    &lt;li&gt;List item
+&lt;/ul&gt;</code></pre>
+                    </div>
+                    <h3 id="quotation-marks-html">Quotation Marks</h3>
+                    <p>Always use double quotes for attributes.</p>
+                    <h4>Do</h4>
+                    <div class="code-block code-block--do">
+                        <pre><code>&lt;p class="statement"&gt;Lorem ipsum dolor sit amet.&lt;/div&gt;</code></pre>
+                    </div>
+                    <h4>Don’t</h4>
+                    <div class="code-block code-block--do-not">
+                        <pre><code>&lt;p class='statement'&gt;Lorem ipsum dolor sit amet.&lt;/div&gt;</code></pre>
+                    </div>
+                    <div class="code-block code-block--do-not">
+                        <pre><code>&lt;p class=statement&gt;Lorem ipsum dolor sit amet.&lt;/div&gt;</code></pre>
+                    </div>
+                    <h3 id="linked-types">Linked Resource Types</h3>
+                    <p>Leave type attributes off links to stylesheets and scripts</p>
+                    <h4>Do</h4>
+                    <div class="code-block code-block--do">
+                        <pre><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></pre>
+                    </div>
+                    <div class="code-block code-block--do">
+                        <pre><code>&lt;script src="script.js"&gt;&lt;/script&gt;</code></pre>
+                    </div>
+                    <h4>Don’t</h4>
+                    <div class="code-block code-block--do-not">
+                        <pre><code>&lt;link rel="stylesheet" href="styles.css" type="text/css"&gt;</code></pre>
+                    </div>
+                    <div class="code-block code-block--do-not">
+                        <pre><code>&lt;script src="script.js type="text/javascript"&gt;&lt;/script&gt;</code></pre>
+                    </div>
+                    <h3 id="entities">Character Entities</h3>
+                    <p>Avoid using HTML entities. Use the appropriate unicode characters.</p>
+                    <h4>Do</h4>
+                    <div class="code-block code-block--do">
+                        <pre><code>&lt;p&gt;Jeg føler mig dårlig.&lt;/p&gt;</code></pre>
+                    </div>
+                    <h4>Don’t</h4>
+                    <div class="code-block code-block--do-not">
+                        <pre><code>&lt;p&gt;Jeg f&amp;oslash;ler mig d&amp;aring;rlig&lt;/p&gt;</code></pre>
+                    </div>
+                    <h4>Exception</h4>
+                    <p>Use entities for space characters.</p>
+                    <div class="code-block code-block--do">
+                        <pre><code>&lt;p&gt;I am using a non-breaking space to prevent an&amp;nbsp;orphan.&lt;/p&gt;</code></pre>
+                    </div>
+                    <h3 id="semantics">Semantics</h3>
+                    <p>Use elements for their intended purpose.</p>
+                    <h4>Do</h4>
+                    <div class="code-block code-block--do">
+                        <pre><code>&lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;</code></pre>
+                    </div>
+                    <div class="code-block code-block--do">
+                        <pre><code>&lt;a href="/about.html"&gt;About&lt;/div&gt;</code></pre>
+                    </div>
+                    <div class="code-block code-block--do">
+                        <pre><code>&lt;button type="button"&gt;Load more&lt;/button&gt;</code></pre>
+                    </div>
+                    <h4>Don’t</h4>
+                    <div class="code-block code-block--do-not">
+                        <pre><code>&lt;div&gt;Lorem ipsum dolor sit amet.&lt;/div&gt;</code></pre>
+                    </div>
+                    <div class="code-block code-block--do-not">
+                        <pre><code>&lt;div onclick="goToAbout();"&gt;About&lt;/a&gt;</code></pre>
+                    </div>
+                    <div class="code-block code-block--do-not">
+                        <pre><code>&lt;a href="#"&gt;Load more&lt;/a&gt;</code></pre>
+                    </div>
+                    <h3 id="separate-concerns">Separation of Concerns</h3>
+                    <p>Avoid inline styles and javascript.</p>
+                    <h4>Don’t</h4>
+                    <div class="code-block code-block--do-not">
+                        <code>&lt;div style="font-size: 14px;"&gt;Lorem ipsum dolor sit amet&lt;/div&gt;</code>
+                    </div>
+                    <div class="code-block code-block--do-not">
+                        <pre><code>&lt;a href="#" onclick="doSomething();"&gt;Lorem&lt;/a&gt;</code></pre>
+                    </div>
+                    <h3 id="multimedia-fallbacks">Multimedia Fallbacks</h3>
+                    <p>Always include alternative text for multimedia.</p>
+                    <h4>Do</h4>
+                    <div class="code-block code-block--do">
+                        <pre><code>&lt;img src="/img/bread.jpg" alt="Rye bread on a table." /&gt;</code></pre>
+                    </div>
+                    <h3 id="html5-outline">HTML5 Outline</h3>
+                    <p>Do not rely on the HTML5 outline algorithm. Use traditional heading structures. Screen readers do not widely recognize the HTML5 outline.</p>
+                    <h4>Do</h4>
+                    <div class="code-block code-block--do">
+                        <pre><code>&lt;section&gt;
+    &lt;h1&gt;Section Title&lt;/h1&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+    &lt;p&gt;Lorem ipsum dolor &lt;a href="/home.html"&gt;lorem ipsum&lt;/a&gt;&lt;/p&gt;
+    &lt;article&gt;
+        &lt;h2&gt;Article Title&lt;/h2&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+        &lt;h3&gt;Article Subtitle&lt;/h3&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+    &lt;/article&gt;
+&lt;/section&gt;</code></pre>
+                    </div>
+                    <h4>Don’t</h4>
+                    <div class="code-block code-block--do-not">
+                        <pre><code>&lt;section&gt;
+    &lt;h1&gt;Section Title&lt;/h1&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+    &lt;p&gt;Lorem ipsum dolor &lt;a href="/home.html"&gt;lorem ipsum&lt;/a&gt;&lt;/p&gt;
+    &lt;article&gt;
+        &lt;h1&gt;Article Title&lt;/h1&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+        &lt;h2&gt;Article Subtitle&lt;/h2&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+    &lt;/article&gt;
+&lt;/section&gt;</code></pre>
+                    </div>
+                </section>
+                <section id="css">
+                    <h2 class="section-title">CSS</h2>
+                    <h3 id="selector-formatting">Selector Formatting</h3>
+                    <p>Selector on the same line as the opening bracket. Style declarations each on their own line. Closing bracket on its own line after the last property.</p>
+                    <div class="code-block code-block--do">
+                        <pre><code>.selector {
+    margin-bottom: 1em;
+}</code></pre>
+                    </div>
+                    <p>Put one empty line between selectors.</p>
+                    <div class="code-block code-block--do">
+                        <pre><code>.selector-one {
+    margin-bottom: 1em;
+}
+
+.selector-two {
+    border-color: red;
+}
+</code></pre>
+                    </div>
+                    <h3 id="selector-grouping">Selector Grouping</h3>
+                    <p>Put multiple selectors on their own line.</p>
+                    <div class="code-block code-block--do">
+                        <pre><code>.selector-one,
+.selector-two,
+.selector-three {
+    margin-bottom: 1em;
+}</code></pre>
+                    </div>
+                    <h3 id="property-order">Property Order</h3>
+                    <p>Put all properties in alphabetical order. This prevents creating duplicate properties and simplifies working with multiple developers.</p>
+                    <div class="code-block code-block--do">
+                        <pre><code>.selector {
+    background-color: white;
+    color: black;
+    display: inline-block;
+    margin-bottom: 1em;
+    position: relative;
+    z-index: 1;
+}</code></pre>
+                    </div>
+                    <h3 id="selector-indentation">Indentation</h3>
+                    <p>Indent selectors inside media queries.</p>
+                    <div class="code-block code-block--do">
+                        <pre><code>@media all and (min-width: 35em) {
+
+    .selector {
+        margin-bottom: 1em;
+    }
+
+}</code></pre>
+                    </div>
+                    <p>Indent related selectors based on their parent-child relationship.</p>
+                    <div class="code-block code-block--do">
+                        <pre><code>.parent {
+    margin-bottom: 1em;
+}
+
+    .child-one {
+        color: black;
+    }
+
+        .child-one-child {
+            background-color: red;
+        }
+
+    .child-two {
+        color: white;
+    }</code></pre>
+                    </div>
+                    <p><b>Note:</b> The goal is to show related elements of discrete structures and to avoid adding extra specificity only for CSS readability, not to recreate the entire DOM.</p>
+                    <h3 id="quotation-marks-css">Quotation Marks</h3>
+                    <p>Use single quotes except on URIs.</p>
+                    <h4>Do</h4>
+                    <div class="code-block code-block--do">
+                        <pre><code>.selector {
+    background-image: url(/img/graphic.png);
+    font-family: 'Times New Roman', serif;
+}</code></pre>
+                    </div>
+                    <h3 id="decimal">Decimals</h3>
+                    <p>Round decimals up to four decimal places. Include the preceeding 0 for numbers less than 1.</p>
+                    <h4>Do</h4>
+                    <div class="code-block code-block--do">
+                        <pre><code>.selector {
+    font-size: 1.6667em;
+    margin-left: 0.75em;
+}</code></pre>
+                    </div>
+                    <h3 id="units">Units</h3>
+                    <p>Do not include units on zero values.</p>
+                    <div class="code-block code-block--do">
+                        <pre><code>.selector {
+    margin-left: 0;
+}</code></pre>
+                    </div>
+                    <h3 id="color-values">Color Values</h3>
+                    <p>Use shorthand for hex values when possible.</p>
+                    <div class="code-block code-block--do">
+                        <pre><code>.selector {
+    color: #333;
+}</code></pre>
+                    </div>
+                    <p>Use named colors for very common color values.</p>
+                    <div class="code-block code-block--do">
+                        <pre><code>.selector {
+    background-color: white;
+}</code></pre>
+                    </div>
+                    <p>Use RGBA and other CSS3 color values when necessary, but generally avoid for deeper support.</p>
+                    <div class="code-block code-block--maybe">
+                        <pre><code>.selector {
+    background-color: rgba(0,0,0,0.5);
+}</code></pre>
+                </section>
+            </main>
+            <footer class="site-footer" role="contentinfo">
+                <p class="center">Jarvus Innovations</p>
+            </footer>
+        </div>
+    </body>
+</html>
