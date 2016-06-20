@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en-us">
+<html lang="en-us">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,6 +21,7 @@
                             <li><a href="#trailing-whitespace">Trailing Whitespace</a></li>
                             <li><a href="#resource-linking">Resource Linking</a></li>
                             <li><a href="#encoding">Encoding</a></li>
+                            <li><a href="#naming">Naming</a></li>
                         </ul>
                     </li>
                     <li>
@@ -132,6 +133,11 @@
                     <p>Encode HTML and CSS documents in UTF-8. Specify this encoding in HTML in the head (not necessary in CSS).</p>
                     <div class="code-block code-block--do">
                         <pre><code>&lt;meta charset="utf-8"&gt;</code></pre>
+                    </div>
+                    <h3 id="naming">Naming</h3>
+                    <p>Create seperate class names prefixed with <code>js-</code> for JavaScript hooks. Do not use these for styling.</p>
+                    <div class="code-block code-block--do">
+                        <pre><code>&lt;button type="button" class="btn js-btn-load-more"&gt;Load More&lt;/button&gt;</code></pre>
                     </div>
                 </section>
                 <section id="html">
